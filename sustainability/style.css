@@ -1,10 +1,16 @@
+
 :root {
   --color-primary: #A88C4D;
   --color-secondary: #F5F5F5;
   --color-accent: #FFFFFF;
+  --color-dark: #1B1B1B;
   --max-width: 1200px;
   --section-spacing: 80px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,6 +62,22 @@ body {
   padding: 0;
 }
 
+.logo {
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #000;
+  display: none;
+  cursor: pointer;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #000;
@@ -65,6 +87,27 @@ body {
 
 .nav-links a:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
 }
 
 /* Sections */
@@ -79,6 +122,7 @@ section {
   text-align: center;
   min-height: 100vh;
   color: var(--color-accent);
+  position: relative;
 }
 
 .hero .tagline {
@@ -90,6 +134,22 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.parallax .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.parallax .container {
+  position: relative;
+  z-index: 1;
 }
 
 .card-grid {
