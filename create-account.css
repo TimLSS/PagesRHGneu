@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+.account-create-wrapper {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.account-create-wrapper h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.account-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.account-form input[type="text"],
+.account-form input[type="email"],
+.account-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+.account-form fieldset {
+    border: none;
+    margin-bottom: 15px;
+    padding: 0;
+}
+.account-form legend {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #c6a700;
+}
+.account-form .required {
+    color: #e03a3e;
+    margin-left: 4px;
+}
+.account-form .checkbox {
+    margin-top: 10px;
+    font-weight: normal;
+}
+button.submit {
+    background: #c6a700;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+button.submit:hover {
+    background: #b19000;
+}
